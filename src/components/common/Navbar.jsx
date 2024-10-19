@@ -21,10 +21,10 @@ const Navbar = ({ setInput, input, page, setPage }) => {
           {/* Search Bar (Hidden on small screens) */}
           <div className="hidden sm:block flex-1 max-w-xs">
             <input
-              onChange={(e) => { setInput(e.target.value); setPage(1); }}
+              onChange={(e) => { e.length===0?setInput(null):setInput(e.target.value); setPage(1); }}
               type="text"
               placeholder="Search..."
-              className="border border-gray-300 rounded-lg p-2 text-center w-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-lg p-2 text-center  text-black w-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
